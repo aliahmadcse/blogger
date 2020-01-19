@@ -243,6 +243,14 @@ section .container .owl-nav [class*="owl-"] {
 }
 /* ---x---blog carousal----x--- */
 
+/* --------site content-------- */
+main .site-content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  
+}
+/* ---x-----site content----x---- */
+
 /* ----x---Main content-------x--- */
 
 /* viewport less than or equal to 750px */
