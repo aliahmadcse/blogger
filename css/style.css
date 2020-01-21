@@ -258,7 +258,7 @@ main .site-content {
 }
 
 main .post-content {
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
 }
 
 main .site-content .post-content > .post-image,
