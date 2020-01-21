@@ -16,8 +16,8 @@ $(document).ready(function() {
     dots: false,
     nav: true,
     responsive: {
-      0:{
-        items:1
+      0: {
+        items: 1
       },
       320: {
         items: 1
@@ -25,10 +25,9 @@ $(document).ready(function() {
       560: {
         items: 2
       },
-      960:{
-        items:3
+      960: {
+        items: 3
       }
-
     }
     // navText:[$('.owl-navigation .owl-nav-prev' ),$('.owl-navigation .owl-nav-next')],
   });
