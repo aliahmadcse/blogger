@@ -304,7 +304,24 @@ main .post-content .post-title a{
   background: var(--sky);
 }
 
+.site-content .pagination{
+  justify-content: center;
+  color:var(--text-light);
+  margin: 4rem 0rem;
 
+}
+
+.site-content .pagination a{
+  padding:.6rem .9rem;
+  border-radius: 2rem;
+  margin: 0 .3rem;
+  font-family: var(--Lexend);
+}
+
+.site-content .pagination .page{
+  background: var(--text-light);
+  color: var(--white);
+}
 /* ---x-----site content----x---- */
 
 /* ----x---Main content-------x--- */
