@@ -377,6 +377,17 @@ main .post-content .post-title a {
   margin: 1rem 0;
   background: var(--sky);
 }
+
+.site-content .sidebar .popular-tags{
+  margin:5rem 0;
+}
+
+.site-content .sidebar .popular-tags .tags .tag{
+  background: var(--sky);
+  padding:.4rem 1rem;
+  border-radius: 3rem;
+  margin: .4rem .6rem;
+}
 /* -----x---sidebar--------x------ */
 
 /* ----x---Main content-------x--- */
