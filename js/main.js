@@ -45,3 +45,11 @@ $(document).ready(function() {
   // AOS instance
   AOS.init();
 });
+
+// validating form using vanilla js
+const warnings = document.getElementById("errors");
+
+function validateForm() {
+  warnings.innerHTML="Hello";
+  return false;
+}
