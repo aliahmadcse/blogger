@@ -50,11 +50,14 @@ $(document).ready(function() {
 const errorList = document.getElementById("errors");
 const errors = [];
 function validateForm() {
-  const isValid = true;
+  let isValid = true;
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const subject = document.getElementById("subject").value;
-
+  const subjectLen = subject.length;
+  const intRegex = /\d/;
+  const emailValidationRegex = /\S+@\S+\.\S+/;
+  const minSubjectLen = 20;
   // checking for empty values
   if (!name) {
     errors.push("Name can not be blank");
@@ -68,9 +71,27 @@ function validateForm() {
     errors.push("Subject can not be blank");
     isValid = false;
   }
-  if (isValid==false) {
+
+  //checking if name contains any integer
+  if (intRegex.test(name)) {
+    errors.push("Name must not contain any numeric character");
+    isValid = false;
+  }
+  // checking for email validity
+  if (!emailValidationRegex.test(email)) {
+    errors.push("Email is not valid");
+    isValid = false;
+  }
+  // checking for the minimum length of subject
+  if (subjectLen < minSubjectLen) {
+    errors.push(`Subject length should be greater than ${minSubjectLen}`);
+    isValid=false;
+  }
+  //displaying errors if we got any
+  if (isValid == false) {
     displayErrors();
   }
+
   return isValid;
 }
 
