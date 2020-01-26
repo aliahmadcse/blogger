@@ -50,14 +50,14 @@ input[type="submit"]:hover {
   padding: 20px;
 }
 
-.form-container label{
+.form-container label {
   font-family: var(--Lexend);
 }
 
-#errors{
-  text-align:center;
+#errors {
+  text-align: center;
   color: rgb(185, 39, 39);
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
 @media screen and (max-width: 1000px) {
   .form-container {

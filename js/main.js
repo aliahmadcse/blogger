@@ -47,9 +47,39 @@ $(document).ready(function() {
 });
 
 // validating form using vanilla js
-const warnings = document.getElementById("errors");
-
+const errorList = document.getElementById("errors");
+const errors = [];
 function validateForm() {
-  warnings.innerHTML="Hello";
-  return false;
+  const isValid = true;
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const subject = document.getElementById("subject").value;
+
+  // checking for empty values
+  if (!name) {
+    errors.push("Name can not be blank");
+    isValid = false;
+  }
+  if (!email) {
+    errors.push("Email can not be blank");
+    isValid = false;
+  }
+  if (!subject) {
+    errors.push("Subject can not be blank");
+    isValid = false;
+  }
+  if (isValid==false) {
+    displayErrors();
+  }
+  return isValid;
+}
+
+// displaying the errors list in the form of unordered list
+function displayErrors() {
+  errors.forEach(element => {
+    const errorListItem = document.createElement("li");
+    const errorListItemText = document.createTextNode(element);
+    errorListItem.appendChild(errorListItemText);
+    errorList.appendChild(errorListItem);
+  });
 }
