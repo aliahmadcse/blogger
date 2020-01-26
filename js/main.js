@@ -85,7 +85,7 @@ function validateForm() {
   // checking for the minimum length of subject
   if (subjectLen < minSubjectLen) {
     errors.push(`Subject length should be greater than ${minSubjectLen}`);
-    isValid=false;
+    isValid = false;
   }
   //displaying errors if we got any
   if (isValid == false) {
